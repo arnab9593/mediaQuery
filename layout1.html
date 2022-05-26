@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MQ layout 1</title>
+    <style>
+        #navi{
+            margin: auto;
+            margin-top: 2%;
+            height: 100px;
+            background-color: #F7FF00;
+            font-size: 60px;
+        }
+        #box{
+            margin: auto;
+            margin-top: 2%;
+            display: grid;
+            grid-template-rows: 250px;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+        }
+        #box>div{
+            padding: 20px;
+        }
+        #box>div:nth-child(1){
+            background-color: #FF0000;
+        }
+        #box>div:nth-child(2){
+            background-color: #00FF2A;
+        }
+        #box>div:nth-child(3){
+            background-color: #5763EE;
+        }
+        #box>div:nth-child(4){
+            background-color: #989898;
+        }
+        @media all and (min-width: 810px) and (max-width: 1080px){
+            #box{
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: repeat(2, 250px);
+                gap: 20px;
+            }
+        }
+        @media all and (min-width: 250px) and (max-width: 809px){
+            #box{
+                grid-template-rows: repeat(4, 200px);
+                grid-template-columns: repeat(1,1fr);
+                gap: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="navi">Navigation</div>
+    <div id="box">
+        <div>box1</div>
+        <div>box2</div>
+        <div>box3</div>
+        <div>box4</div>
+    </div>
+</body>
+</html>
